@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MakersbnbApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(MakersbnbApplication.class, args);
 	}
 

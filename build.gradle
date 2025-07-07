@@ -25,6 +25,7 @@ dependencies {
 	implementation 'org.flywaydb:flyway-database-postgresql'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'com.microsoft.playwright:playwright:1.28.0'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
