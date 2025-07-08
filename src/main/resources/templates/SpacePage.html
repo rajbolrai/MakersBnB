@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spaces</title>
+</head>
+<body>
+    <div th:each="space : ${spaces}">
+        <p th:text="|${space.name} is a ${space.description} place, cost £${space.prices}|">
+    </div>
+
+</body>
+</html>
