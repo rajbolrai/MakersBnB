@@ -18,10 +18,12 @@ public class Space {
     private String name;
     private String description;
     private float prices;
+    private String rules;
 
-    public Space(String name, String description, float price){
+    public Space(String name, String description, float price, String rules){
         this.name = name;
         this.description = description;
         this.prices = price;
+        this.rules = rules;
     }
 }

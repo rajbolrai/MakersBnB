@@ -6,7 +6,7 @@
 </head>
 <body>
     <div th:each="space : ${spaces}">
-        <p th:text="|${space.name} is a ${space.description} place, cost £${space.prices}|">
+        <p th:text="|${space.name} is a ${space.description} place, cost £${space.prices}, Rules are ${space.rules}|">
     </div>
 
 </body>

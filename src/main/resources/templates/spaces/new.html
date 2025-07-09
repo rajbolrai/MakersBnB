@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleag.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/spaces}" th:object="${space}" method ="post">
+        <label th:for="name">Name:</label>
+        <input type="text" th:field="*{name}"/> <br>
+        <label th:for="description">Description:</label>
+        <input type="text" th:field="*{description}"/><br>
+        <label th:for="price">Price:</label>
+        <input type="number" th:field="*{prices}"/><br>
+        <label th:for="rules"> Rules</label>
+        <input type="text" th:field="*{rules}">
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
+    </form>
+
+</body>
+</html>
