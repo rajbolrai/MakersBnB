@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>Spaces</title>
@@ -7,6 +7,17 @@
 <body>
     <div th:each="space : ${spaces}">
         <p th:text="|${space.name} is a ${space.description} place, cost £${space.prices}, Rules are ${space.rules}|">
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        Hello, you are logged in as <span sec:authentication="principal.attributes['email']"></span>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">Logout</button>
+        </form>
     </div>
 
 </body>
