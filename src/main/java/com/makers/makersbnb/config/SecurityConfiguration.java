@@ -26,7 +26,7 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests(
-                authorize->authorize.requestMatchers(HttpMethod.GET, "/spaces").permitAll().anyRequest().authenticated()
+                authorize->authorize.requestMatchers(HttpMethod.GET, "/spaces", "/", "/contact", "/css/**").permitAll().anyRequest().authenticated()
             ).oauth2Login(withDefaults()).
                 logout(logout->logout.addLogoutHandler(logoutHandler()));
         return http.build();
