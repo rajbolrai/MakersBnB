@@ -35,25 +35,4 @@ public class StaticPageController {
        return modelAndView;
     }
 
-    @GetMapping("/spaces")
-    public ModelAndView spacePage() {
-        ModelAndView modelAndView = new ModelAndView("/SpacePage");
-        Iterable<Space> spaces = spaceRepository.findAll();
-        modelAndView.addObject("spaces", spaces);
-        return modelAndView;
-    }
-
-    @GetMapping("/spaces/new")
-    public ModelAndView newSpaceForm(){
-       Space space = new Space();
-       ModelAndView newSpaceForm = new ModelAndView("spaces/new");
-       newSpaceForm.addObject("space", space);
-       return newSpaceForm;
-    }
-
-    @PostMapping("/spaces")
-    public RedirectView create(Space space){
-       spaceRepository.save(space);
-       return new RedirectView("/spaces");
-    }
 }

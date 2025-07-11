@@ -6,8 +6,9 @@
 </head>
 <body>
     <div th:each="space : ${spaces}">
-        <p th:text="|${space.name} is a ${space.description} place, cost £${space.prices}, Rules are ${space.rules}|">
+        <p th:text="|${space.name} : ${#dates.format(space.available_date, 'dd-MM-yyyy')}|">
     </div>
+
 
     <div sec:authorize="isAuthenticated()">
         Hello, you are logged in as <span sec:authentication="principal.attributes['email']"></span>

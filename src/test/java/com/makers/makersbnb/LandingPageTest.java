@@ -76,6 +76,7 @@ public class LandingPageTest {
         for(int i = 0; i<spaces.count();i++){
             texts.add(spaces.nth(i).innerText());
         }
+
         assertTrue(texts.contains("Spain is a sunny place, cost £10.0"), "Actual paragraphs: " + texts.toString());
         assertTrue(texts.contains("Germany is a cold place, cost £5.0"));
         assertTrue(texts.contains("France is a sunny place, cost £2.0"));
